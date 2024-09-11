@@ -1,0 +1,49 @@
+.page {
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  font-family: var(--font-inter);
+  background-color: #f0f8ff;
+}
+
+.header {
+  display: grid;
+  place-items: center;
+  height: 10vh;
+  max-height: 70px;
+  align-items: center;
+  justify-items: center;
+  padding-top: 30px;
+}
+
+.header h1 {
+  color: black;
+  font-weight: 200;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  padding: 60px;
+  overflow-y: auto;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
