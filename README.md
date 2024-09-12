@@ -22,13 +22,11 @@ INSTRUCTIONS
 - pip install django-cors-headers
 - python manage.py migrate
 
-4. Install libraries (listed below)
+4. Run
 
-5. Run
-
-- cd ../blockhouse
+- cd blockhouse
 - npm run dev
-- cd ../blockhouseApi
+- cd blockhouseApi
 - python manage.py runserver
 
 ---
