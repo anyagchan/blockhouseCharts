@@ -28,6 +28,7 @@ ChartJS.register(
 const LineChart = () => {
   const [resData, setResData] = useState({ labels: [], data: [] });
 
+  // GET CHART DATA
   useEffect(() => {
     const getLineData = async () => {
       try {
@@ -43,6 +44,7 @@ const LineChart = () => {
     getLineData();
   }, []);
 
+  // SETUP CHART DATASETS AND LABELS
   const data = {
     labels: resData.labels,
     datasets: [
@@ -55,6 +57,7 @@ const LineChart = () => {
     ],
   };
 
+  // SET CHART OPTIONS
   const options = {
     plugins: {
       legend: {

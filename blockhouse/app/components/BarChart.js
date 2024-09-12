@@ -24,16 +24,7 @@ ChartJS.register(
 const BarChart = () => {
   const [resData, setResData] = useState({ labels: [], data: [] });
 
-  const CHART_COLORS = {
-    Red: "rgb(255, 99, 132)",
-    Orange: "rgb(255, 159, 64)",
-    Yellow: "rgb(255, 205, 86)",
-    Green: "rgb(75, 192, 192)",
-    Blue: "rgb(54, 162, 235)",
-    Purple: "rgb(153, 102, 255)",
-    Grey: "rgb(201, 203, 207)",
-  };
-
+  // GET CHART DATA
   useEffect(() => {
     const getBarData = async () => {
       try {
@@ -49,7 +40,7 @@ const BarChart = () => {
     getBarData();
   }, []);
 
-  // Bar chart data structure
+  // SETUP CHART DATASETS AND LABELS
   const data = {
     labels: resData.labels,
     datasets: [
@@ -63,7 +54,7 @@ const BarChart = () => {
     ],
   };
 
-  // Bar chart options
+  // SET CHART OPTIONS
   const options = {
     responsive: true,
     plugins: {

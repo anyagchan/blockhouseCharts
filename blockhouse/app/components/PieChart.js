@@ -25,6 +25,7 @@ const PieChart = () => {
     Grey: "rgb(201, 203, 207, 0.75)",
   };
 
+  // GET CHART DATA
   useEffect(() => {
     const getPieData = async () => {
       try {
@@ -40,6 +41,7 @@ const PieChart = () => {
     getPieData();
   }, []);
 
+  // SETUP CHART DATASETS AND LABELS
   const data = {
     labels: resData.labels,
     datasets: [
@@ -54,6 +56,7 @@ const PieChart = () => {
     ],
   };
 
+  // SET CHART OPTIONS
   const options = {
     plugins: {
       legend: {

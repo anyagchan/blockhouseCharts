@@ -1,11 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import ReactApexChart from "react-apexcharts";
+import dynamic from "next/dynamic";
 import axios from "axios";
+
+const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+  ssr: false,
+});
 
 const CandlestickChart = () => {
   const [resData, setResData] = useState([]);
 
+  // GET CHART DATA
   useEffect(() => {
     const getCandlestickData = async () => {
       try {
@@ -21,6 +26,7 @@ const CandlestickChart = () => {
     getCandlestickData();
   }, []);
 
+  // REFORMAT CHART DATA
   const seriesData = resData.map((item) => ({
     x: new Date(item.x),
     y: [item.open, item.high, item.low, item.close],
@@ -32,6 +38,7 @@ const CandlestickChart = () => {
     },
   ];
 
+  // SET CHART OPTIONS
   const options = {
     chart: {
       type: "candlestick",

@@ -11,6 +11,7 @@ const Home = () => {
       <div className={styles.header}>
         <h1>Blockhouse Dashboard</h1>
       </div>
+
       <div className={styles.main}>
         <section className={styles.chart}>
           <h2>Candlestick Chart</h2>

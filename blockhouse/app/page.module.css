@@ -2,7 +2,6 @@
   align-items: center;
   justify-items: center;
   min-height: 100vh;
-  font-family: var(--font-inter);
   background-color: #f0f8ff;
 }
 
@@ -17,8 +16,9 @@
 }
 
 .header h1 {
+  font-family: "Inter", sans-serif;
   color: black;
-  font-weight: 200;
+  font-weight: 500;
 }
 
 .main {
@@ -26,7 +26,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
-  padding: 60px;
+  padding: 80px;
   overflow-y: auto;
 }
 
