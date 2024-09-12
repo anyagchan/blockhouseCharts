@@ -10,16 +10,16 @@ INSTRUCTIONS
 
 2. Front-end Next.js (blockhouse)
 
-- cd ../blockhouse
+- cd blockhouse
 - npm install
 
 3. Back-end Django API (blockhouseApi)
 
-- cd ../blockhouseApi
+- cd blockhouseApi
 - python -m venv venv
 - source venv/bin/activate
-- pip install -r requirements.txt
 - pip install django djangorestframework
+- pip install django-cors-headers
 - python manage.py migrate
 
 4. Install libraries (listed below)
@@ -40,6 +40,7 @@ LIBRARIES
 - chart.js
 - react-chartjs-2
 - react-apexcharts apexcharts
+- corsheaders
 
 ---
 
